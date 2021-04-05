@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">API Calling inAngular !</h1>
+    <p class="lead">Here we are calling online data with HttpClient Class.</p>
+    <p>Data fetched with vertically and horizontally with <a href="https://getbootstrap.com/docs/4.6/components/card/" target="_blank"> Bootstrap Card</a></p>
+    <hr class="my-4">
+    <p>Fetching data from - http://jsonplaceholder.typicode.com/users.</p>
+    <a class="btn btn-primary btn-lg" href="https://github.com/malikhimani21" role="button">Learn more</a>
+  </div>
+
+  <div *ngFor="let item of apiData">
+    <div class="card">
+      <div class="card-header">
+        <span>Name</span> - <b>{{ item.name }}</b>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Username - <b>{{ item.username }}</b></h5>
+        <p class="card-text">Email - {{ item.email }} <br><br>
+          {{ item.company.catchPhrase }}
+        </p>
+        <a href="#" class="btn btn-primary">Website - www.{{ item.website }}</a>
+
+      </div>
+    </div>
+    <br>
+  </div>
+  <hr><hr>
+
+  <div>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let item of apiData" style="margin-top: 16px;">
+        <div class="card">
+          <div class="card-header">
+            <span>Name</span> - <b>{{ item.name }}</b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Username - <b>{{ item.username }}</b></h5>
+            <p class="card-text">Email - {{ item.email }} <br><br>
+              {{ item.company.catchPhrase }}
+            </p>
+            <a href="#" class="btn btn-primary">Website - www.{{ item.website }}</a>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <br>
+  </div>
+
+</div>
+
+<!-- <h1>You're in default components</h1>
+<h3 *ngFor="let item of apiData">
+  {{ item.name }}, {{ item.email }}
+</h3> -->
